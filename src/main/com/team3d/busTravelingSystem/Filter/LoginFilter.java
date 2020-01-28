@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-@WebFilter("/UserPage.jsp")
+@WebFilter({"/UserPage.jsp" , "/AdminPage.jsp"})
 public class LoginFilter implements Filter {
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
@@ -22,6 +22,8 @@ public class LoginFilter implements Filter {
 
         boolean isLoginPage = request.getRequestURI().endsWith("Login.jsp");
 
+
+
         if (isLoggedIn && (isLoginRequest || isLoginPage)) {
             // the user is already logged in and he's trying to login again
             // then forwards to the users homepage
@@ -33,7 +35,10 @@ public class LoginFilter implements Filter {
             // allows the request to reach the destination
             filterChain.doFilter(request, response);
 
-        } else {
+
+        }
+
+        else {
             // the admin is not logged in, so authentication is required
             // forwards to the Login page
             RequestDispatcher dispatcher = request.getRequestDispatcher("Login.jsp");

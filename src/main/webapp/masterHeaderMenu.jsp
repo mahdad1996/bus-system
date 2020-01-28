@@ -54,8 +54,8 @@
                 <nav class="col-md-6 no-padding">
 
                     <ul>
-                        <li><a href="">صفحه اصلی</a></li>
-                        <li><a href="">حساب کاربری</a>
+                        <li><a href="index.jsp">صفحه اصلی</a></li>
+                        <li><a href="UserPage.jsp">حساب کاربری</a>
                             <ul>
 
                                 <li><a href="Signup.jsp">ثبت نام</a></li>
@@ -64,7 +64,6 @@
                             </ul>
 
                         </li>
-                        <li><a href="">برنامه سفر ها</a></li>
 
                     </ul>
 

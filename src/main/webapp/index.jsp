@@ -19,24 +19,7 @@
 
     <div class="row">
 
-        <div class="search-form">
-            <form>
-                <div class="form-group">
-                    <label class="form-control">انتخاب مبدا</label>
-                    <input list="browsers" name="myBrowser" /></label>
-                    <datalist id="browsers">
-                        <option value="Chrome">
-                        <option value="Firefox">
-                        <option value="Internet Explorer">
-                        <option value="Opera">
-                        <option value="Safari">
-                        <option value="Microsoft Edge">
-                    </datalist>
-                </div>
-            </form>
 
-
-        </div>
 
 
     </div>

@@ -20,6 +20,6 @@
 
         <mapping class="main.com.team3d.busTravelingSystem.Persistent.Models.User"/>
         <mapping class="main.com.team3d.busTravelingSystem.Persistent.Models.Role"/>
-
+        <mapping class="main.com.team3d.busTravelingSystem.Persistent.Models.Travel"/>
     </session-factory>
 </hibernate-configuration>

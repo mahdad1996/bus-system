@@ -170,15 +170,16 @@ ul{
     align-items: stretch;
     align-content: stretch;
     width: 100%;
-    height: 100px;
-    border:1px solid black;
-
-
-
+    height: auto;
+    margin-bottom: 5%;
 }
 
 .search-form label{
     text-align: right;
+    direction: rtl;
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 input[type="text"],[type="password"],[type="email"]{
@@ -197,12 +198,36 @@ input[type="text"],[type="password"],[type="email"]{
     margin-top: 2px;
 }
 
+.sign-up-form input[type="date"]{
+    margin-top: 2px;
+    text-align: center;
+    height: 40px!important;
+
+}
+
+.sign-up-form label{
+    direction: rtl;
+}
+
 .alert-position{
     width: auto;
     height: 70px;
     float: right;
     margin: 5px 5px 5px 5px;
-    z-index: 15!important;
+    z-index: 6!important;
     display: flex;
 
 }
+
+.search-form input[type="text"]{
+    width: 20%;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.search-form input[type="date"]{
+    width: 20%!important;
+    margin-right: 10px!important;
+    margin-left: 10px!important;
+}
+
