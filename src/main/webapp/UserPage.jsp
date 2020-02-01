@@ -1,4 +1,6 @@
-<%@ page import="java.util.Date" %><%--
+<%@ page import="java.util.Date" %>
+<%@ page import="main.com.team3d.busTravelingSystem.Persistent.Models.Travel" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: Admin
   Date: 1/27/2020
@@ -45,21 +47,27 @@
 
         <div class="clearfix"></div>
 
-        <div class="col-md-12 col-sm-6">
-            <div class="search-form">
-            <form>
+    </div>
+
+</div>
+
+<div class="container">
+
+    <div class="col-md-12 col-sm-6">
+        <div class="search-form">
+            <form method="post" action="Search">
                 <div class="form-group row flex-row-reverse">
 
                     <label>مبدا : </label>
-                        <input name="source" type="text" class="form-control"/>
+                    <input name="source" type="text" class="form-control"/>
 
 
                     <label>مقصد :</label>
-                        <input name="destination" type="text" class="form-control"/>
+                    <input name="destination" type="text" class="form-control"/>
 
 
                     <label>تاریخ :</label>
-                        <input name="destination" type="text" class="form-control"/>
+                    <input name="date" type="text" class="form-control"/>
 
 
                     ‌<button type="submit" class="btn btn-info">Search</button>
@@ -68,10 +76,69 @@
 
 
             </form>
-            </div>
-
         </div>
+
     </div>
+
+    <div class="clearfix"></div>
+
+    <% if(request.getAttribute("listTravels")!=null){%>
+
+    <table class="table-striped">
+        <%
+            List<Travel> travels = (List<Travel>) request.getAttribute("listTravels");
+
+            %>
+        <thead>
+        <tr>
+            <th colspan="2" scope="col" class="text-right">
+                مسیر :
+                <%=request.getParameter("source")%>
+                -
+                <%=request.getParameter("destination")%>
+            </th>
+
+            <th scope="col" class="text-left">
+                تاریخ حرکت :
+                <%=request.getParameter("date")%>
+
+            </th>
+
+        </tr>
+
+        </thead>
+        <tbody>
+        <tr>
+            <th>انتخاب</th>
+            <th>ساعت</th>
+            <th>شناسه سفر</th>
+        </tr>
+        </tbody><%
+
+            for (Travel travel : travels) {%>
+
+        <tbody>
+        <tr>
+            <td><button class="btn btn-info">خرید</button> </td>
+            <td><%=travel.getHour()%></td>
+            <td><%=travel.getId()%></td>
+        </tr>
+        </tbody>
+
+
+        <%
+            }
+        %>
+
+    </table>
+    <%
+        }
+
+        else {%>
+            <p>nothing Found!<p><%}
+
+    %>
+
 
 </div>
 

@@ -1,10 +1,12 @@
 package main.com.team3d.busTravelingSystem.Persistent.Models;
 
 import javax.persistence.*;
+import java.time.LocalTime;
+import java.util.Comparator;
 import java.util.Date;
 
 @Entity
-public class Travel {
+public class Travel implements Comparator<Travel>{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -20,6 +22,7 @@ public class Travel {
 
     @Transient
     private String persianDate;
+
 
     public Travel() {
     }
@@ -77,5 +80,11 @@ public class Travel {
 
     public void setHour(String hour) {
         this.hour = hour;
+    }
+
+
+    @Override
+    public int compare(Travel o1, Travel o2) {
+        return o1.getHour().compareTo(o2.hour);
     }
 }
