@@ -231,3 +231,27 @@ input[type="text"],[type="password"],[type="email"]{
     margin-left: 10px!important;
 }
 
+
+.table{
+    margin-right: 35%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    direction: rtl;
+    text-align: center;
+
+}
+
+td, th {
+    border: 1px solid #dddddd;
+
+    padding: 8px;
+
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
