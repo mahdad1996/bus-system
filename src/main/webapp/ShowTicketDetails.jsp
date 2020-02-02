@@ -61,6 +61,10 @@
             </table>
 
 
+            <form method="post" action="DeleteTicket">
+                <button class="btn btn-info">لغو بلیط</button>
+            </form>
+
 
 <%};%>
 
