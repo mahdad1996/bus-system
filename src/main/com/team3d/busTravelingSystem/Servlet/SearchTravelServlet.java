@@ -23,6 +23,7 @@ public class SearchTravelServlet extends HttpServlet {
         String dest = request.getParameter("destination");
         String date = request.getParameter("date");
 
+
         ShowTravelsByUser showTravelsByUser=new main.com.team3d.busTravelingSystem.Domain.ShowTravelsByUser();
         List<Travel> travels = showTravelsByUser.Show();
         for (Travel t : travels){

@@ -1,3 +1,4 @@
+
 <%@ page import="java.util.Date" %>
 <%@ page import="main.com.team3d.busTravelingSystem.Persistent.Models.Travel" %>
 <%@ page import="java.util.List" %><%--
@@ -15,6 +16,8 @@
 
     <link rel="stylesheet" href="resources/css/Style.css">
     <link rel="stylesheet" href="resources/css/bootstrap.css">
+
+
     <title>User Page</title>
 </head>
 <body>
@@ -119,8 +122,18 @@
 
         <tbody>
         <tr>
-            <td><button class="btn btn-info">خرید</button> </td>
+            <td>
+                <form action="Confirm" method="post">
+                    <button class="btn btn-info">خرید</button>
+<%--                    <%--%>
+<%--                        request.getSession().setAttribute("tid",travel.getId());--%>
+<%--                    %>--%>
+                    <input type="hidden" value="<%=travel.getId()%>" name="tid" />
+                </form>
+            </td>
+
             <td><%=travel.getHour()%></td>
+
             <td><%=travel.getId()%></td>
         </tr>
         </tbody>
@@ -134,8 +147,7 @@
     <%
         }
 
-        else {%>
-            <p>nothing Found!<p><%}
+
 
     %>
 
@@ -145,10 +157,16 @@
 <jsp:include page="masterFooter.jsp"></jsp:include>
 
 
+<script>
+    function getTravelId(id) {
+        alert(id);
+    }
+
+</script>
+
 
 <script type="javascript" src="resources/js/jquery-3.4.1.slim.min.js"></script>
 <script type="javascript" src="resources/js/popper.min.js"></script>
 <script type="javascript" src="resources/js/bootstrap.js"></script>
-
 </body>
 </html>

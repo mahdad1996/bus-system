@@ -5,7 +5,6 @@
 }
 
 body {
-    font-family: myFont;
     font-size: 13px;
     background-color:#fafafa;
     color:#616161;
@@ -253,5 +252,12 @@ td, th {
 
 tr:nth-child(even) {
     background-color: #dddddd;
+}
+
+.reserve-form{
+    display: block;
+    width: 300px;
+    height: auto;
+    border: 1px solid black;
 }
 

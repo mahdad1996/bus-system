@@ -23,7 +23,6 @@ public class Travel implements Comparator<Travel>{
     @Transient
     private String persianDate;
 
-
     public Travel() {
     }
 
@@ -33,6 +32,8 @@ public class Travel implements Comparator<Travel>{
         this.date = date;
         this.hour = hour;
     }
+
+   
 
     public String getPersianDate() {
         return persianDate;
