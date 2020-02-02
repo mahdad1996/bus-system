@@ -46,6 +46,9 @@
             <form method="post" action="Logout">
                 <button type="submit" class="btn btn-danger">خروج</button>
             </form>
+            <form method="post" action="ShowTickets">
+                <button type="submit" class="btn btn-block">مشاهده بلیط</button>
+            </form>
         </div>
 
         <div class="clearfix"></div>
@@ -157,12 +160,6 @@
 <jsp:include page="masterFooter.jsp"></jsp:include>
 
 
-<script>
-    function getTravelId(id) {
-        alert(id);
-    }
-
-</script>
 
 
 <script type="javascript" src="resources/js/jquery-3.4.1.slim.min.js"></script>
