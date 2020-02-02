@@ -43,7 +43,11 @@
     <tbody>
     <tr>
         <td>
-            <a href="">انتخاب</a>
+            <form method="post" action="TicketDetails">
+            <button class="btn btn-info" >انتخاب</button>
+                <input type="hidden" value="<%=ticket.getId()%>" name="ticketIdForDetails" />
+
+            </form>
         </td>
 
         <td>
