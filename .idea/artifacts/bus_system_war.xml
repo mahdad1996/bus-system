@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="bus-system:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>bus-system</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="bus-system.war">
+      <element id="artifact" artifact-name="bus-system:war exploded" />
+    </root>
+  </artifact>
+</component>
